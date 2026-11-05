@@ -9,22 +9,13 @@ export const ProfileCard: React.FC = () => {
   return (
     <div className="w-full">
       <div className="profile-box rounded-[38px] p-6 sm:p-7 md:p-8 flex flex-col items-center text-center bg-[#0d0d0d]/90 backdrop-blur-2xl border border-white/[0.12] shadow-[0_20px_60px_rgba(0,0,0,0.7)] transition-all duration-300 hover:border-white/25">
-        {/* Profile Image with Availability Pill */}
+        {/* Profile Image */}
         <div className="relative w-full aspect-square max-w-[280px] rounded-[28px] overflow-hidden mb-6 border border-white/10 group">
           <img
             src="/assets/images/profile.jpg"
             alt="Sazzad Chowdhury"
             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
-
-          {/* Top-left pill: Available for work */}
-          <div className="absolute top-3.5 left-3.5 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-white/15 text-[11px] font-medium text-white shadow-md">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-            </span>
-            <span>Available for work</span>
-          </div>
         </div>
 
         {/* Full Name — Soft Silver/Metallic #e2e2e2 from reference */}
