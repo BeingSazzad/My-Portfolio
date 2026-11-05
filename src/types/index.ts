@@ -30,6 +30,13 @@ export interface ExperienceItem {
   type?: string;
 }
 
+export interface EducationItem {
+  degree: string;
+  field: string;
+  institution: string;
+  year: string;
+}
+
 export interface TestimonialItem {
   id: number;
   quote: string;
