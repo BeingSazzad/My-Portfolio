@@ -32,17 +32,17 @@ export const ProfileCard: React.FC = () => {
           Sazzad Chowdhury
         </h3>
 
-        {/* Subtitle / Roles */}
+        {/* Subtitle / Roles: Clear hierarchy - UI/UX Core + Vibe Coding + Full Support */}
         <div className="mt-2.5 flex flex-col items-center">
-          <p className="text-sm sm:text-[15px] font-medium text-white/85 leading-snug">
-            UI/UX Designer &amp; Web Developer
+          <p className="text-sm sm:text-[15px] font-semibold text-white tracking-tight leading-snug">
+            UI/UX &amp; Product Designer
           </p>
           <p className="text-xs sm:text-[13px] text-white/50 leading-relaxed mt-0.5 font-normal">
-            Digital Marketing &amp; Growth
+            Frontend Vibe Coding · Full Web Support
           </p>
         </div>
 
-        {/* Social Links — Order: Dribbble -> GitHub -> LinkedIn -> Phone */}
+        {/* Social Links — Dribbble -> GitHub -> LinkedIn -> Phone */}
         <div className="flex items-center justify-center gap-3 mt-6">
           <a
             href="https://dribbble.com/Sazzad_Ux"

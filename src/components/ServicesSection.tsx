@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 interface ServiceItem {
   id: number;
+  badge: string;
+  badgeColor: string;
   title: string;
   description: string;
   tags: string[];
@@ -10,38 +12,39 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   {
     id: 1,
+    badge: 'CORE FOCUS',
+    badgeColor: 'text-[#fff95b] border-[#fff95b]/30 bg-[#fff95b]/5',
     title: 'UI/UX & Product Design',
     description:
-      'End-to-end user-centred interface design for web and mobile. From user research, journey mapping, and wireframing to high-fidelity, interactive prototypes built for developer handoff.',
-    tags: ['Figma', 'Mobile & Web Apps', 'User Flows', 'Wireframing', 'Interactive Prototypes'],
+      'My primary craft: human-centred interface design for web and mobile products. Delivering data-backed user research, user journey flows, wireframes, high-fidelity Figma components, and token-driven design systems ready for production.',
+    tags: ['Figma', 'Mobile & Web Apps', 'Design Systems', 'User Research', 'Wireframing', 'WCAG 2.2 AA'],
   },
   {
     id: 2,
-    title: 'AI-Driven Design & Vibe Coding',
+    badge: 'THE EDGE',
+    badgeColor: 'text-cyan-400 border-cyan-400/30 bg-cyan-400/5',
+    title: 'Vibe Coding & Frontend Prototyping',
     description:
-      'Supercharging research, ideation, and rapid prototyping using modern AI tools and vibe coding. I code interactive React/Tailwind prototypes that turn static design concepts into realistic proof-of-concepts.',
-    tags: ['AI for UX', 'Vibe Coding', 'Rapid Prototyping', 'Frontend Bridge', 'React / Tailwind'],
+      'Bridging the gap between conceptual design and engineering. Using modern AI tools (Cursor, Lovable, Antigravity) and React/Tailwind to code functional, live prototypes—testing real physics, animations, and states before engineering build.',
+    tags: ['React', 'Tailwind CSS', 'Cursor', 'Lovable', 'Vibe Coding', 'Interactive Prototypes'],
   },
   {
     id: 3,
-    title: 'Design Systems & Token Architecture',
+    badge: 'ADDITIONAL SUPPORT',
+    badgeColor: 'text-white/60 border-white/20 bg-white/5',
+    title: 'Full Website WordPress Development',
     description:
-      'Creating scalable, token-driven design systems in Figma and code. Enforcing consistent typography, spacing, accessible contrast (WCAG 2.2 AA), and modular components that developers love.',
-    tags: ['Design Tokens', 'Component Libraries', 'Figma Variants', 'WCAG 2.2 AA', 'Handoff Specs'],
+      'Complete end-to-end website solutions using WordPress. Transforming approved UI designs into clean, responsive, fast-loading, and easily maintainable websites with custom theme architecture and CMS flexibility.',
+    tags: ['Custom WordPress', 'Responsive Web', 'Landing Pages', 'CMS Architecture', 'Speed Optimization'],
   },
   {
     id: 4,
-    title: 'Web & WordPress Solutions',
+    badge: 'ADDITIONAL SUPPORT',
+    badgeColor: 'text-white/60 border-white/20 bg-white/5',
+    title: 'Conversion UX, SEO & Growth Strategy',
     description:
-      'Custom website and WordPress development optimized for speed, responsive fluidity, and conversion. Transforming intricate Figma mockups into clean, functional, maintainable web experiences.',
-    tags: ['Custom WordPress', 'Responsive Web', 'Landing Pages', 'CMS Architecture'],
-  },
-  {
-    id: 5,
-    title: 'Conversion UX & Usability Testing',
-    description:
-      'Auditing and refining digital products to eliminate user drop-off. Leveraging 5+ years of digital marketing and behavioral data to optimize onboarding, checkout, and engagement funnels.',
-    tags: ['Usability Testing', 'Conversion Optimization', 'Funnel Redesign', 'Information Architecture'],
+      'Leveraging over 5 years of hands-on background in digital marketing and SEO. Designing landing pages and product funnels engineered for organic search visibility, high retention, and measurable business conversions.',
+    tags: ['Technical SEO', 'Conversion Optimization', 'Funnel Redesign', 'Marketing Psychology', 'Graphic Assets'],
   },
 ];
 
@@ -58,7 +61,7 @@ export const ServicesSection: React.FC = () => {
       <div className="mb-6">
         <div className="eyebrow-badge">
           <i className="ri-customer-service-2-line text-[#fff95b] mr-2 text-xs" />
-          <span>SERVICES &amp; CAPABILITIES</span>
+          <span>CAPABILITIES &amp; SERVICES</span>
         </div>
       </div>
 
@@ -68,7 +71,7 @@ export const ServicesSection: React.FC = () => {
         <span className="color-gradient font-semibold">Empower Your Product</span>
       </h2>
 
-      {/* Accordion Container */}
+      {/* Accordion Container with Clear Hierarchy */}
       <div className="mt-12 border-t border-white/15 divide-y divide-white/15">
         {services.map((service) => {
           const isOpen = openId === service.id;
@@ -80,18 +83,25 @@ export const ServicesSection: React.FC = () => {
                 aria-expanded={isOpen}
                 className="w-full py-7 md:py-8 flex items-center justify-between text-left focus:outline-none"
               >
-                <span
-                  className={`text-2xl md:text-[28px] font-medium tracking-tight transition-all duration-300 ${
-                    isOpen
-                      ? 'text-white pl-2'
-                      : 'text-white/70 group-hover:text-white'
-                  }`}
-                >
-                  {service.title}
-                </span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                  <span
+                    className={`text-2xl md:text-[28px] font-medium tracking-tight transition-all duration-300 ${
+                      isOpen
+                        ? 'text-white pl-2'
+                        : 'text-white/70 group-hover:text-white'
+                    }`}
+                  >
+                    {service.title}
+                  </span>
+                  <span
+                    className={`text-[10px] font-mono uppercase tracking-wider px-2.5 py-0.5 rounded-full border self-start sm:self-auto ${service.badgeColor}`}
+                  >
+                    {service.badge}
+                  </span>
+                </div>
 
                 <div
-                  className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                  className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 flex-shrink-0 ml-4 ${
                     isOpen
                       ? 'border-[#fff95b] text-[#fff95b] rotate-90 bg-white/5'
                       : 'border-white/20 text-white/50 group-hover:border-white/50 group-hover:text-white'

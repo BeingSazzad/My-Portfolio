@@ -16,35 +16,31 @@ export const AboutSection: React.FC = () => {
         My Journey &amp; <span className="color-gradient font-semibold">Vision</span>
       </h2>
 
-      {/* Narrative Bio */}
+      {/* Narrative Bio — Core UI/UX + Vibe Coding + Additional Support Hierarchy */}
       <div className="mt-8 space-y-5 text-base sm:text-lg text-white/70 leading-relaxed max-w-2xl font-normal">
         <p>
-          Hi, I’m <span className="text-white font-medium">Sazzad Chowdhury</span>—a Senior UI/UX Designer passionate about crafting functional, beautiful, and user-centred digital products that stand the test of time.
+          Hi, I’m <span className="text-white font-medium">Sazzad Chowdhury</span>. My primary focus and craft is <span className="text-white font-semibold">UI/UX &amp; Product Design</span>—designing intuitive, scalable digital interfaces in Figma with obsessive care for user behavior, clear visual hierarchy, and tokenized design systems.
         </p>
         <p>
-          With over 5 years across digital product, marketing psychology, and interface design, I understand user behavior, business goals, and what it truly takes to ship. I blend deep research with modern design tools, AI-accelerated workflows, and vibe coding—bridging the gap between conceptual mockups and production-ready code.
+          Where I provide a distinctive edge is in <span className="text-[#fff95b] font-medium">Vibe Coding &amp; Frontend Prototyping</span>. Instead of just delivering static screens, I build live, interactive prototypes with React and modern AI coding tools—ensuring designs feel natural and developer handoffs are friction-free.
+        </p>
+        <p>
+          As <span className="text-white/90 font-medium">additional full-stack support</span>, I leverage over 5 years of background in building complete WordPress websites, graphic design, SEO, and digital marketing. This means every product I design is built with real business conversion, organic discoverability, and technical feasibility in mind.
         </p>
       </div>
 
-      {/* Three Guiding Philosophy Pillars */}
+      {/* Three Structured Guiding Pillars */}
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-5">
         <div className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300">
           <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#fff95b] mb-4">
             <i className="ri-compass-3-line text-lg" />
           </div>
-          <h4 className="text-white font-medium text-base mb-2">User-Centred UX</h4>
+          <span className="text-[10px] font-mono text-[#fff95b] uppercase tracking-wider block mb-1">
+            CORE FOCUS
+          </span>
+          <h4 className="text-white font-medium text-base mb-2">UI/UX &amp; Systems</h4>
           <p className="text-sm text-white/60 leading-relaxed">
-            Data-informed research, wireframing, and usability testing that drive conversion.
-          </p>
-        </div>
-
-        <div className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300">
-          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#fff95b] mb-4">
-            <i className="ri-layout-masonry-line text-lg" />
-          </div>
-          <h4 className="text-white font-medium text-base mb-2">Design Systems</h4>
-          <p className="text-sm text-white/60 leading-relaxed">
-            Scalable token systems in Figma and code with strict accessibility and spacing hierarchy.
+            User research, wireframing, high-fidelity Figma components, and tokenized design systems.
           </p>
         </div>
 
@@ -52,9 +48,25 @@ export const AboutSection: React.FC = () => {
           <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#fff95b] mb-4">
             <i className="ri-flashlight-line text-lg" />
           </div>
+          <span className="text-[10px] font-mono text-[#fff95b] uppercase tracking-wider block mb-1">
+            THE EDGE
+          </span>
           <h4 className="text-white font-medium text-base mb-2">Vibe Coding</h4>
           <p className="text-sm text-white/60 leading-relaxed">
-            Interactive prototypes built with frontend tools to eliminate developer handoff friction.
+            Live interactive code prototypes (React / Tailwind) to test micro-interactions before engineering.
+          </p>
+        </div>
+
+        <div className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-300">
+          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#fff95b] mb-4">
+            <i className="ri-stack-line text-lg" />
+          </div>
+          <span className="text-[10px] font-mono text-[#fff95b] uppercase tracking-wider block mb-1">
+            FULL SUPPORT
+          </span>
+          <h4 className="text-white font-medium text-base mb-2">Web, SEO &amp; Growth</h4>
+          <p className="text-sm text-white/60 leading-relaxed">
+            End-to-end WordPress websites, technical SEO architecture, and conversion-backed marketing strategy.
           </p>
         </div>
       </div>

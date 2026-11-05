@@ -17,20 +17,20 @@ export const HeroSection: React.FC = () => {
       <div className="mb-6">
         <div className="eyebrow-badge">
           <i className="ri-sparkling-fill text-[#fff95b] mr-2 text-xs" />
-          <span>HELLO · SENIOR UI/UX DESIGNER</span>
+          <span>HELLO · UI/UX &amp; PRODUCT DESIGNER</span>
         </div>
       </div>
 
       {/* Hero Headline */}
       <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-medium leading-[1.12] tracking-tight text-white max-w-2xl">
-        Helping Businesses<br />
-        Grow Through<br />
-        <span className="color-gradient font-semibold">Digital Innovation</span>
+        Designing Digital Products<br />
+        That Are Functional &amp;<br />
+        <span className="color-gradient font-semibold">Built to Ship</span>
       </h1>
 
-      {/* Subtitle Description */}
+      {/* Subtitle Description — UI/UX Core + Vibe Coding Edge + Additional Support */}
       <p className="mt-6 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl font-normal">
-        A Senior UI/UX Designer based in Dhaka. Transforming tricky web flows and overcrowded layouts into clean, intuitive, and high-impact digital experiences.
+        UI/UX Designer based in Dhaka. My primary focus is crafting user-centred interfaces in Figma, bridged with live vibe coding prototypes, and backed by full-lifecycle support in WordPress, SEO, and growth marketing.
       </p>
 
       {/* Action Buttons */}
