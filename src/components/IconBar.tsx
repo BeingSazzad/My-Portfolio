@@ -11,10 +11,9 @@ const navItems: NavItem[] = [
   { id: 'about', label: 'About', icon: 'ri-user-line' },
   { id: 'resume', label: 'Resume', icon: 'ri-align-center' },
   { id: 'service', label: 'Services', icon: 'ri-briefcase-2-line' },
-  { id: 'skills', label: 'Skills', icon: 'ri-cpu-line' },
+  { id: 'skills', label: 'Skills', icon: 'ri-tools-line' },
   { id: 'portfolio', label: 'Portfolio', icon: 'ri-computer-line' },
   { id: 'testimonials', label: 'Comments', icon: 'ri-chat-1-line' },
-  { id: 'pricing', label: 'Pricing', icon: 'ri-price-tag-2-line' },
   { id: 'contact', label: 'Contact', icon: 'ri-mail-send-line' },
 ];
 
@@ -70,4 +69,3 @@ export const IconBar: React.FC<IconBarProps> = ({ activeSection }) => {
     </nav>
   );
 };
-

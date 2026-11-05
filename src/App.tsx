@@ -12,7 +12,6 @@ import { SkillsSection } from './components/SkillsSection';
 import { PortfolioSection } from './components/PortfolioSection';
 import { LightboxModal, ProjectModalData } from './components/LightboxModal';
 import { TestimonialsSection } from './components/TestimonialsSection';
-import { PricingSection } from './components/PricingSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
@@ -32,7 +31,6 @@ export const App: React.FC = () => {
       'skills',
       'portfolio',
       'testimonials',
-      'pricing',
       'contact',
     ];
 
@@ -96,7 +94,6 @@ export const App: React.FC = () => {
             <SkillsSection />
             <PortfolioSection onSelectProject={setSelectedProject} />
             <TestimonialsSection />
-            <PricingSection />
             <ContactSection />
             <Footer />
           </main>
