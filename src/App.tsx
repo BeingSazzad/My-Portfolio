@@ -11,7 +11,6 @@ import { ScrollProgressBar } from './components/ScrollProgressBar';
 
 // Page Flow Sections
 import { HeroSection } from './sections/HeroSection';
-import { AboutSection } from './sections/AboutSection';
 import { ResumeSection } from './sections/ResumeSection';
 import { ServicesSection } from './sections/ServicesSection';
 import { SkillsSection } from './sections/SkillsSection';
@@ -30,7 +29,6 @@ export const App: React.FC = () => {
   useEffect(() => {
     const sectionIds = [
       'home',
-      'about',
       'resume',
       'service',
       'skills',
@@ -87,7 +85,6 @@ export const App: React.FC = () => {
           {/* Right Column: Main Content Sections — Balanced & Breathable */}
           <main className="w-full flex-1 min-w-0">
             <HeroSection />
-            <AboutSection />
             <ResumeSection />
             <ServicesSection />
             <SkillsSection />

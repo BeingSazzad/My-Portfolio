@@ -27,13 +27,18 @@ export const HeroSection: React.FC = () => {
         <span className="text-metallic">that feel simple &amp; </span><span className="color-gradient font-semibold">ready to ship</span>
       </h1>
 
-      {/* Subtitle Description — Human-Centric, Senior, No Geographic Filler */}
-      <p className="mt-6 text-base sm:text-lg text-white/65 leading-relaxed max-w-2xl font-normal">
-        Product Designer with 5+ years of experience crafting mobile and web apps. I build clean systems in Figma, validate interactions with code prototypes, and care about the details that make software a joy to use.
-      </p>
+      {/* Unified Narrative — Human-Centric, Honest Craft & Philosophy */}
+      <div className="mt-8 space-y-4 max-w-2xl text-base sm:text-lg text-white/65 leading-relaxed font-normal">
+        <p>
+          I’m a Product Designer with 5+ years of experience turning complex workflows into intuitive web and mobile products. Most of my day is spent inside Figma—wireframing user journeys, refining interface clarity, and building token-driven design systems that keep engineering teams aligned.
+        </p>
+        <p>
+          Because real products don’t live on static canvases alone, I validate interactions through code prototypes. Testing real states and animation physics early catches edge cases before development, delivering developer handoffs with zero guesswork.
+        </p>
+      </div>
 
       {/* Action Buttons */}
-      <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
+      <div className="mt-9 flex flex-wrap items-center gap-4">
         <a
           href="#contact"
           onClick={scrollToContact}
