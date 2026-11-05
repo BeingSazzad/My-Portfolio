@@ -53,7 +53,7 @@ export const ResumeSection: React.FC = () => {
       </div>
 
       {/* 02. Education Subsection */}
-      <div className="mt-14 pt-10 border-t border-white/10">
+      <div className="mt-14">
         <div className="text-xs font-mono tracking-widest text-[#fff95b] uppercase mb-4">
           // ACADEMIC BACKGROUND
         </div>
