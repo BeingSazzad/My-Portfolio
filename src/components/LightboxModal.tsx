@@ -1,11 +1,5 @@
 import React, { useEffect } from 'react';
-
-export interface ProjectModalData {
-  title: string;
-  image: string;
-  category: string;
-  description: string;
-}
+import { ProjectModalData } from '../types';
 
 interface LightboxModalProps {
   project: ProjectModalData | null;
@@ -51,11 +45,11 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ project, onClose }
         </button>
 
         {/* Image Preview */}
-        <div className="relative w-full max-h-[65vh] overflow-hidden bg-black flex items-center justify-center">
+        <div className="relative w-full max-h-[60vh] overflow-hidden bg-black flex items-center justify-center">
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-auto object-contain max-h-[65vh]"
+            className="w-full h-auto object-contain max-h-[60vh]"
           />
         </div>
 
@@ -71,12 +65,36 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ project, onClose }
             <p className="text-sm text-white/60 mt-1 max-w-xl">
               {project.description}
             </p>
+
+            {project.tags && project.tags.length > 0 && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {project.tags.map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-white/[0.04] border border-white/10 text-white/60"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 flex-shrink-0">
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="visiblo-btn-color text-xs py-2.5 px-5 flex items-center gap-2"
+              >
+                <i className="ri-github-fill text-sm" />
+                <span>GitHub Repo</span>
+              </a>
+            )}
             <button
               onClick={onClose}
-              className="visiblo-btn-arrow text-xs py-2.5 px-6"
+              className="visiblo-btn-arrow text-xs py-2.5 px-5"
             >
               <span>Close View</span>
             </button>
@@ -86,4 +104,3 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ project, onClose }
     </div>
   );
 };
-

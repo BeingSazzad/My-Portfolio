@@ -48,7 +48,7 @@ export const ContactSection: React.FC = () => {
 
       {/* Heading */}
       <h3 className="section-title">
-        Let's Build Something <br />
+        Let's Build Something <br className="hidden sm:inline" />
         <span className="color-gradient font-semibold">Exceptional Together</span>
       </h3>
 
@@ -88,14 +88,14 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Subject / Project Scope Text Input — No Dropdown */}
+            {/* Subject / Project Scope Text Input — Clean text input */}
             <div>
               <label className="block text-xs font-mono uppercase tracking-wider text-white/60 mb-2">
                 Project Scope / Subject
               </label>
               <input
                 type="text"
-                placeholder="e.g. Mobile App UI/UX, Web Design, Vibe Coding, etc."
+                placeholder="e.g. Mobile App UI/UX, Design System, Code Prototype..."
                 value={formData.service}
                 onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                 className="w-full bg-white/[0.03] border border-white/20 focus:border-[#fff95b] text-white px-5 py-4 rounded-[12px] outline-none transition-colors duration-200 text-sm placeholder:text-white/30"
@@ -118,72 +118,85 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Submit Action */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="visiblo-btn-color px-10 py-4 text-xs font-semibold tracking-wider uppercase disabled:opacity-50 cursor-pointer"
+                className="visiblo-btn-color px-10 py-4 text-xs uppercase tracking-wider font-semibold cursor-pointer disabled:opacity-50"
               >
-                <span>{status === 'submitting' ? 'SENDING...' : 'SEND MESSAGE'}</span>
-                <i className="ri-send-plane-fill ml-2 text-sm" />
+                <span>
+                  {status === 'submitting' ? 'SENDING...' : 'SEND MESSAGE'}
+                </span>
+                <i className="ri-send-plane-fill ml-2 text-xs" />
               </button>
 
               {status === 'success' && (
-                <div className="flex items-center gap-2 text-emerald-400 text-sm font-medium">
-                  <i className="ri-checkbox-circle-fill text-lg" />
-                  <span>Thank you! Your message has been received. I'll get back to you shortly.</span>
+                <div className="text-emerald-400 text-sm flex items-center gap-2">
+                  <i className="ri-checkbox-circle-fill text-base" />
+                  <span>Message sent successfully! I'll reply within 24h.</span>
                 </div>
               )}
 
               {status === 'error' && (
-                <div className="flex items-center gap-2 text-rose-400 text-sm font-medium">
-                  <i className="ri-error-warning-fill text-lg" />
-                  <span>Please fill out all required fields.</span>
+                <div className="text-rose-400 text-sm flex items-center gap-2">
+                  <i className="ri-error-warning-fill text-base" />
+                  <span>Please fill in all required fields.</span>
                 </div>
               )}
             </div>
           </form>
         </div>
 
-        {/* Quick Contact Info Cards */}
-        <div className="lg:col-span-4 flex flex-col gap-5">
-          <div className="p-6 rounded-[20px] border border-white/10 bg-white/[0.02]">
-            <span className="text-xs font-mono text-[#fff95b] uppercase tracking-wider block mb-1">
-              DIRECT EMAIL
+        {/* Contact Info Sidebar */}
+        <div className="lg:col-span-4 space-y-6">
+          <div className="p-7 rounded-[22px] border border-white/10 bg-white/[0.02] backdrop-blur-md">
+            <span className="text-xs font-mono text-[#fff95b] uppercase tracking-wider block mb-2">
+              DIRECT REACH
             </span>
-            <a
-              href="mailto:shazzad.cse@gmail.com"
-              className="text-base sm:text-lg font-medium text-white hover:text-[#fff95b] transition-colors break-all"
-            >
-              shazzad.cse@gmail.com
-            </a>
-            <p className="text-xs text-white/50 mt-1">Average response time: &lt; 24h</p>
+            <h4 className="text-white text-lg font-medium mb-4">
+              Let's Discuss Your Product
+            </h4>
+            <div className="space-y-4 text-sm text-white/70">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#fff95b] flex-shrink-0">
+                  <i className="ri-mail-line" />
+                </div>
+                <a
+                  href="mailto:sazzadux@gmail.com"
+                  className="hover:text-white transition-colors truncate"
+                >
+                  sazzadux@gmail.com
+                </a>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#fff95b] flex-shrink-0">
+                  <i className="ri-phone-line" />
+                </div>
+                <a
+                  href="tel:+8801830685904"
+                  className="hover:text-white transition-colors"
+                >
+                  +880 1830-685904
+                </a>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#fff95b] flex-shrink-0">
+                  <i className="ri-map-pin-line" />
+                </div>
+                <span>Dhaka, Bangladesh · Remote Worldwide</span>
+              </div>
+            </div>
           </div>
 
-          <div className="p-6 rounded-[20px] border border-white/10 bg-white/[0.02]">
+          <div className="p-7 rounded-[22px] border border-white/10 bg-gradient-to-br from-[#fff95b]/10 to-transparent">
             <span className="text-xs font-mono text-[#fff95b] uppercase tracking-wider block mb-1">
-              PHONE &amp; WHATSAPP
+              CURRENT AVAILABILITY
             </span>
-            <a
-              href="tel:+8801830685904"
-              className="text-base sm:text-lg font-medium text-white hover:text-[#fff95b] transition-colors font-mono"
-            >
-              +880 1830-685904
-            </a>
-            <p className="text-xs text-white/50 mt-1">Available on WhatsApp &amp; Calls</p>
-          </div>
-
-          <div className="p-6 rounded-[20px] border border-white/10 bg-white/[0.02]">
-            <span className="text-xs font-mono text-[#fff95b] uppercase tracking-wider block mb-1">
-              LOCATION &amp; STATUS
-            </span>
-            <div className="text-base font-medium text-white">
-              Middle Badda, Dhaka, Bangladesh
-            </div>
-            <div className="flex items-center gap-2 text-white font-medium text-xs mt-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Available for Selective Roles &amp; Projects</span>
-            </div>
+            <p className="text-white font-medium text-base mt-2">
+              Available for high-impact Product Design contracts &amp; Senior UI/UX roles.
+            </p>
           </div>
         </div>
       </div>

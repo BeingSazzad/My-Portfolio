@@ -10,11 +10,10 @@ interface SidebarDrawerProps {
 const navLinks = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'resume', label: 'Resume' },
+  { id: 'resume', label: 'Experience' },
   { id: 'service', label: 'Services' },
   { id: 'skills', label: 'Skills' },
   { id: 'portfolio', label: 'Portfolio' },
-  { id: 'testimonials', label: 'Testimonials' },
   { id: 'contact', label: 'Contact' },
 ];
 

@@ -12,7 +12,7 @@ export const ProfileCard: React.FC = () => {
         {/* Profile Image with Availability Pill */}
         <div className="relative w-full aspect-square max-w-[280px] rounded-[28px] overflow-hidden mb-6 border border-white/10 group">
           <img
-            src="/assets/profile.jpg"
+            src="/assets/images/profile.jpg"
             alt="Sazzad Chowdhury"
             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
@@ -32,13 +32,13 @@ export const ProfileCard: React.FC = () => {
           Sazzad Chowdhury
         </h3>
 
-        {/* Subtitle / Roles: Clear hierarchy - UI/UX Core + Vibe Coding + Full Support */}
+        {/* Subtitle / Roles: Senior Product Designer */}
         <div className="mt-2.5 flex flex-col items-center">
           <p className="text-sm sm:text-[15px] font-semibold text-white tracking-tight leading-snug">
-            UI/UX &amp; Product Designer
+            Senior UI/UX &amp; Product Designer
           </p>
           <p className="text-xs sm:text-[13px] text-white/50 leading-relaxed mt-0.5 font-normal">
-            Frontend Vibe Coding · Full Web Support
+            Design Systems &amp; Interactive Prototypes
           </p>
         </div>
 

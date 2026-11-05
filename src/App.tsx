@@ -1,19 +1,25 @@
 import React, { useState, useEffect } from 'react';
+
+// Core UI Components
 import { Preloader } from './components/Preloader';
 import { BackgroundVideo } from './components/BackgroundVideo';
 import { IconBar } from './components/IconBar';
 import { SidebarDrawer } from './components/SidebarDrawer';
 import { ProfileCard } from './components/ProfileCard';
-import { HeroSection } from './components/HeroSection';
-import { AboutSection } from './components/AboutSection';
-import { ResumeSection } from './components/ResumeSection';
-import { ServicesSection } from './components/ServicesSection';
-import { SkillsSection } from './components/SkillsSection';
-import { PortfolioSection } from './components/PortfolioSection';
-import { LightboxModal, ProjectModalData } from './components/LightboxModal';
-import { TestimonialsSection } from './components/TestimonialsSection';
-import { ContactSection } from './components/ContactSection';
+import { LightboxModal } from './components/LightboxModal';
 import { Footer } from './components/Footer';
+
+// Page Flow Sections
+import { HeroSection } from './sections/HeroSection';
+import { AboutSection } from './sections/AboutSection';
+import { ResumeSection } from './sections/ResumeSection';
+import { ServicesSection } from './sections/ServicesSection';
+import { SkillsSection } from './sections/SkillsSection';
+import { PortfolioSection } from './sections/PortfolioSection';
+import { ContactSection } from './sections/ContactSection';
+
+// Shared Types
+import { ProjectModalData } from './types';
 
 export const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -30,7 +36,6 @@ export const App: React.FC = () => {
       'service',
       'skills',
       'portfolio',
-      'testimonials',
       'contact',
     ];
 
@@ -76,24 +81,23 @@ export const App: React.FC = () => {
       />
 
       {/* 5. Main Responsive Grid Container */}
-      <div className="relative z-10 max-w-[1360px] mx-auto px-5 sm:px-8 lg:px-12 py-10 lg:py-16">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 xl:gap-16 items-stretch">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-10 xl:px-12 py-10 lg:py-16">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 xl:gap-14 items-stretch">
           {/* Left Column: Fixed / Sticky Profile Card — stays locked in place as you scroll */}
-          <aside className="w-full lg:w-[340px] xl:w-[380px] flex-shrink-0 self-stretch relative">
+          <aside className="w-full lg:w-[320px] xl:w-[360px] flex-shrink-0 self-stretch relative">
             <div className="lg:sticky lg:top-8 xl:top-12 z-20">
               <ProfileCard />
             </div>
           </aside>
 
-          {/* Right Column: Main Content Sections */}
-          <main className="w-full flex-1 max-w-[880px]">
+          {/* Right Column: Main Content Sections — Full Responsive Breadth */}
+          <main className="w-full flex-1 min-w-0">
             <HeroSection />
             <AboutSection />
             <ResumeSection />
             <ServicesSection />
             <SkillsSection />
             <PortfolioSection onSelectProject={setSelectedProject} />
-            <TestimonialsSection />
             <ContactSection />
             <Footer />
           </main>

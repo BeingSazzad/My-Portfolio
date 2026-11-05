@@ -19,7 +19,7 @@ body {
   background-color: #000000;
   color: #ffffffbf;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Visiblo Signature Typography Gradient */
@@ -134,7 +134,7 @@ body {
 
 /* Section Title */
 .section-title {
-  font-size: 38px;
+  font-size: clamp(28px, 6vw, 38px);
   line-height: 1.2;
   font-weight: 500;
   color: #ffffff;

@@ -1,33 +1,5 @@
 import React from 'react';
-
-interface ExperienceItem {
-  role: string;
-  company: string;
-  period: string;
-}
-
-const experiences: ExperienceItem[] = [
-  {
-    role: 'Senior UI/UX Designer',
-    company: 'Sparktech Agency',
-    period: 'Nov 2024 — Present',
-  },
-  {
-    role: 'UI/UX Designer (Remote)',
-    company: 'Bizzflare',
-    period: 'Nov 2023 — Oct 2024',
-  },
-  {
-    role: 'Digital Marketer & Web Developer',
-    company: 'One Sky Communications',
-    period: 'Sep 2021 — Jul 2024',
-  },
-  {
-    role: 'Interface & Digital Designer',
-    company: 'Independent Client Practice',
-    period: '2019 — 2021',
-  },
-];
+import { experiences } from '../data/experiences';
 
 export const ResumeSection: React.FC = () => {
   return (
@@ -36,14 +8,14 @@ export const ResumeSection: React.FC = () => {
       <div className="mb-6">
         <div className="eyebrow-badge">
           <i className="ri-briefcase-line text-[#fff95b] mr-2 text-xs" />
-          <span>RESUME</span>
+          <span>WORK EXPERIENCE</span>
         </div>
       </div>
 
       {/* Heading */}
       <h2 className="section-title">
-        Creative Thinker <br />
-        <span className="color-gradient font-semibold">Designer, Innovator</span>
+        Companies &amp; <br className="hidden sm:inline" />
+        <span className="color-gradient font-semibold">Work Experience</span>
       </h2>
 
       {/* Work Experience List */}
@@ -61,8 +33,7 @@ export const ResumeSection: React.FC = () => {
                 {exp.company}
               </p>
             </div>
-
-            <div className="text-sm md:text-base text-white/50 font-mono whitespace-nowrap">
+            <div className="text-sm md:text-base font-mono text-white/40 group-hover:text-white/70 transition-colors">
               {exp.period}
             </div>
           </div>

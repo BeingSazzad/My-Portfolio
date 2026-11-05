@@ -1,54 +1,6 @@
 import React from 'react';
-import { ProjectModalData } from './LightboxModal';
-
-interface ProjectItem extends ProjectModalData {
-  id: number;
-  colSpan: string;
-  badge: string;
-}
-
-const projects: ProjectItem[] = [
-  {
-    id: 1,
-    title: 'Shxsh — Community Kindness Social App',
-    category: 'Android App · Google Play · UI/UX Design',
-    badge: 'LIVE ON GOOGLE PLAY',
-    description:
-      'Positive social platform designed to encourage community kindness and uplifting messaging. Crafted the complete mobile UI/UX experience from ground up: engagement feeds, user streaks, anonymous and direct messaging flows, and frictionless onboarding.',
-    image: '/assets/project-01.jpg',
-    colSpan: 'col-span-1 md:col-span-12',
-  },
-  {
-    id: 2,
-    title: 'MamaCare — Caregiver Platform',
-    category: 'Mobile Product · Healthcare & Childcare',
-    badge: 'ACTIVE PRODUCT',
-    description:
-      'Childcare platform connecting African diaspora families with vetted, trusted caregivers. Designed multi-step caregiver onboarding, verified identity profiles, calendar booking flows, and instant support channels.',
-    image: '/assets/project-02.jpg',
-    colSpan: 'col-span-1 md:col-span-6',
-  },
-  {
-    id: 3,
-    title: 'Investors Hub — Property Network',
-    category: 'Web Platform · Fintech & Real Estate',
-    badge: 'LIVE & MONETIZED',
-    description:
-      'Exclusive off-market property investor network built for South Africa (investors-hub.co.za). Architected anonymous investor chat rooms, verified tier access, interactive listing feeds, and subscription billing flows.',
-    image: '/assets/project-03.jpg',
-    colSpan: 'col-span-1 md:col-span-6',
-  },
-  {
-    id: 4,
-    title: 'EduFuture IT — EdTech Platform',
-    category: 'Web Platform · Education & Training',
-    badge: 'LIVE PLATFORM',
-    description:
-      'Leading Bangladeshi IT training and skill-development platform (edufutureit.com). Delivered full UI/UX design featuring intuitive course discovery, trainer onboarding portals, student success showcases, and seminar scheduling systems.',
-    image: '/assets/project-04.jpg',
-    colSpan: 'col-span-1 md:col-span-12',
-  },
-];
+import { projects } from '../data/projects';
+import { ProjectModalData } from '../types';
 
 interface PortfolioSectionProps {
   onSelectProject: (p: ProjectModalData) => void;
@@ -67,11 +19,11 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
 
       {/* Heading */}
       <h2 className="section-title">
-        Projects Where Creativity <br />
+        Projects Where Creativity <br className="hidden sm:inline" />
         <span className="color-gradient font-semibold">Meets Business Strategy</span>
       </h2>
 
-      {/* Projects Grid */}
+      {/* Projects Grid — 6 Flagship Projects */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-12 gap-8">
         {projects.map((project) => (
           <div

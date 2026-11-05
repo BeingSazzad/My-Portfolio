@@ -10,7 +10,7 @@ export const BackgroundVideo: React.FC = () => {
         playsInline
         className="hero-video"
       >
-        <source src="/assets/jely.mp4" type="video/mp4" />
+        <source src="/assets/video/jely.mp4" type="video/mp4" />
       </video>
 
       {/* Dark gradient & noise overlay for maximum readability & aesthetic depth */}
