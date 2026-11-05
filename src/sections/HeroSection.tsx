@@ -24,13 +24,13 @@ export const HeroSection: React.FC = () => {
 
       {/* Hero Headline — Visiblo Signature Metallic & Gold Gradient */}
       <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[62px] font-medium leading-[1.14] tracking-tight">
-        <span className="text-metallic">Designing Scalable Products</span><br />
-        <span className="text-metallic">Users Love &amp; </span><span className="color-gradient font-semibold">Engineers Love to Build</span>
+        <span className="text-metallic">Designing digital products</span><br />
+        <span className="text-metallic">that feel simple &amp; </span><span className="color-gradient font-semibold">ready to ship</span>
       </h1>
 
-      {/* Subtitle Description — Concise & Senior */}
-      <p className="mt-6 text-base sm:text-lg text-white/70 leading-relaxed max-w-2xl font-normal">
-        Senior UI/UX &amp; Product Designer based in Dhaka. Transforming complex product workflows into intuitive design systems and live interactive prototypes.
+      {/* Subtitle Description — Human-Centric, Senior, No Geographic Filler */}
+      <p className="mt-6 text-base sm:text-lg text-white/65 leading-relaxed max-w-2xl font-normal">
+        Product Designer with 5+ years of experience crafting mobile and web apps. I build clean systems in Figma, validate interactions with code prototypes, and care about the details that make software a joy to use.
       </p>
 
       {/* Action Buttons */}
@@ -56,11 +56,11 @@ export const HeroSection: React.FC = () => {
       {/* Quantitative Credibility Bar — 80+ Projects Completed */}
       <div className="mt-14 pt-8 border-t border-white/10 grid grid-cols-3 gap-4 sm:gap-6 max-w-lg">
         <div>
-          <div className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">5+</div>
+          <div className="text-2xl sm:text-3xl font-semibold text-[#e2e2e2] tracking-tight">5+</div>
           <div className="text-xs sm:text-sm text-white/50 mt-1">Years Experience</div>
         </div>
         <div>
-          <div className="text-2xl sm:text-3xl font-semibold text-white tracking-tight">80+</div>
+          <div className="text-2xl sm:text-3xl font-semibold text-[#e2e2e2] tracking-tight">80+</div>
           <div className="text-xs sm:text-sm text-white/50 mt-1">Projects Completed</div>
         </div>
         <div>

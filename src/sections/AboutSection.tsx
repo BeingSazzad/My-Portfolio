@@ -13,17 +13,17 @@ export const AboutSection: React.FC = () => {
 
       {/* Heading with Metallic & Gold Gradients */}
       <h2 className="section-title">
-        <span className="text-metallic">My Journey &amp; </span>
-        <span className="color-gradient font-semibold">Vision</span>
+        <span className="text-metallic">Crafting Products </span><br className="hidden sm:inline" />
+        <span className="color-gradient font-semibold">From Concept to Ship</span>
       </h2>
 
-      {/* Pure Visiblo Narrative — Clutter-Free, No Artificial Boxes */}
-      <div className="mt-8 space-y-6 text-base sm:text-lg text-white/70 leading-relaxed font-normal">
+      {/* Pure Visiblo Narrative — Human-Centric, Honest Craft */}
+      <div className="mt-8 space-y-6 text-base sm:text-lg text-white/65 leading-relaxed font-normal max-w-2xl">
         <p>
-          Hi, I’m <span className="text-white font-medium">Sazzad Chowdhury</span>—a Senior UI/UX &amp; Product Designer passionate about scalable design systems, intuitive digital products, and interactive prototypes. With a deep focus on user behaviour and interface clarity, I strive to turn complex workflows into elegant, high-performing digital experiences.
+          I design digital products from initial concepts to final polish. Most of my days are spent inside Figma—mapping user journeys, sketching layout solutions, and building token-driven design systems that keep engineering teams aligned.
         </p>
         <p>
-          Over the past 5+ years, I’ve led product design across diverse mobile apps and web platforms, blending visual craft with live interactive code prototyping in React. I believe in eliminating engineering friction and building digital products that users love and businesses thrive on.
+          Because great design doesn't stop at static canvases, I regularly build functional prototypes in React and Tailwind. Prototyping in code allows me to test actual interaction physics, catch edge cases before sprint planning, and hand off specs that developers can build with zero ambiguity.
         </p>
       </div>
     </section>

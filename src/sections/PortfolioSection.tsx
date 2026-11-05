@@ -61,7 +61,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
                 <span className="text-xs font-mono text-[#fff95b] uppercase tracking-wider block">
                   {project.category}
                 </span>
-                <h3 className="text-xl sm:text-2xl font-medium text-white group-hover:text-[#fff95b] transition-colors mt-0.5">
+                <h3 className="text-xl sm:text-2xl font-medium text-[#e2e2e2] group-hover:text-[#fff95b] transition-colors mt-0.5">
                   {project.title}
                 </h3>
               </div>

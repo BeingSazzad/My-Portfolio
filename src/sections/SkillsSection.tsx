@@ -41,7 +41,7 @@ export const SkillsSection: React.FC = () => {
             </div>
 
             {/* ONLY Tool Name */}
-            <h4 className="text-base sm:text-lg font-semibold text-white tracking-tight group-hover:text-[#fff95b] transition-colors">
+            <h4 className="text-base sm:text-lg font-medium text-[#e2e2e2] tracking-tight group-hover:text-[#fff95b] transition-colors">
               {tool.name}
             </h4>
           </div>

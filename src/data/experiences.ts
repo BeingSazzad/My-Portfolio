@@ -17,8 +17,8 @@ export const experiences: ExperienceItem[] = [
     period: 'Sep 2021 — Jul 2024',
   },
   {
-    role: 'Interface & Product Designer',
-    company: 'Independent Client Practice',
-    period: '2019 — 2021',
+    role: 'Digital Marketer & Web Designer',
+    company: 'Silicon Solution',
+    period: 'Jan 2021 — Aug 2021',
   },
 ];

@@ -26,7 +26,7 @@ export const ResumeSection: React.FC = () => {
             className="py-7 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-3 group hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition-colors duration-200"
           >
             <div className="flex-1">
-              <h4 className="text-xl md:text-2xl font-medium text-white group-hover:text-[#fff95b] transition-colors">
+              <h4 className="text-xl md:text-2xl font-medium text-[#e2e2e2] group-hover:text-[#fff95b] transition-colors">
                 {exp.role}
               </h4>
               <p className="text-base text-white/60 mt-1 font-normal">

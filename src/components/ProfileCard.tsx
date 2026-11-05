@@ -27,18 +27,15 @@ export const ProfileCard: React.FC = () => {
           </div>
         </div>
 
-        {/* Full Name */}
-        <h3 className="text-2xl sm:text-[28px] font-bold text-white tracking-tight leading-tight">
+        {/* Full Name — Soft Silver/Metallic #e2e2e2 from reference */}
+        <h3 className="text-2xl sm:text-[28px] font-medium text-[#e2e2e2] tracking-tight leading-tight">
           Sazzad Chowdhury
         </h3>
 
-        {/* Subtitle / Roles: Senior Product Designer */}
-        <div className="mt-2.5 flex flex-col items-center">
-          <p className="text-sm sm:text-[15px] font-semibold text-white tracking-tight leading-snug">
-            Senior UI/UX &amp; Product Designer
-          </p>
-          <p className="text-xs sm:text-[13px] text-white/50 leading-relaxed mt-0.5 font-normal">
-            Design Systems &amp; Interactive Prototypes
+        {/* Subtitle / Role: Product Designer (clean, single title, muted color) */}
+        <div className="mt-2 flex flex-col items-center">
+          <p className="text-sm sm:text-[15px] font-normal text-white/60 tracking-tight leading-snug">
+            Product Designer
           </p>
         </div>
 
@@ -99,6 +96,7 @@ export const ProfileCard: React.FC = () => {
             <span>LET'S TALK</span>
           </a>
 
+          {/* Email — Clean, no underline */}
           <a
             href="mailto:shazzad.cse@gmail.com"
             className="text-xs font-mono text-white/60 hover:text-[#fff95b] transition-colors"

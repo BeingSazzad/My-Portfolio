@@ -31,7 +31,7 @@ export const IconBar: React.FC<IconBarProps> = ({ activeSection }) => {
   return (
     <nav
       aria-label="Quick section navigation"
-      className="hidden xl:flex fixed right-8 top-1/2 -translate-y-1/2 z-40 w-[64px] flex-col items-center py-5 rounded-[14px] border border-white/20 bg-black/40 backdrop-blur-md shadow-2xl transition-all duration-300"
+      className="hidden md:flex fixed right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40 w-[54px] lg:w-[62px] flex-col items-center py-4 lg:py-5 rounded-[14px] border border-white/20 bg-black/50 backdrop-blur-md shadow-2xl transition-all duration-300"
     >
       <div className="flex flex-col items-center gap-5">
         {navItems.map((item) => {

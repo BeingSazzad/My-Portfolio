@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { Preloader } from './components/Preloader';
 import { BackgroundVideo } from './components/BackgroundVideo';
 import { IconBar } from './components/IconBar';
-import { SidebarDrawer } from './components/SidebarDrawer';
 import { ProfileCard } from './components/ProfileCard';
 import { LightboxModal } from './components/LightboxModal';
 import { Footer } from './components/Footer';
@@ -23,7 +22,6 @@ import { ProjectModalData } from './types';
 
 export const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
-  const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>('home');
   const [selectedProject, setSelectedProject] = useState<ProjectModalData | null>(null);
 
@@ -69,18 +67,10 @@ export const App: React.FC = () => {
       {/* 2. Signature 3D Glowing Ambient Video Background */}
       <BackgroundVideo />
 
-      {/* 3. Right Floating Dock Navigation (Desktop) */}
+      {/* 3. Right Floating Dock Navigation */}
       <IconBar activeSection={activeSection} />
 
-      {/* 4. Hamburger Trigger & Mobile Drawer Navigation */}
-      <SidebarDrawer
-        isOpen={sidebarOpen}
-        onToggle={() => setSidebarOpen(!sidebarOpen)}
-        onClose={() => setSidebarOpen(false)}
-        activeSection={activeSection}
-      />
-
-      {/* 5. Main Responsive Grid Container — Visiblo Proportioned Layout */}
+      {/* 4. Main Responsive Grid Container — Visiblo Proportioned Layout */}
       <div className="relative z-10 max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 py-10 lg:py-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 items-stretch">
           {/* Left Column: Fixed / Sticky Profile Card — stays locked in place as you scroll */}

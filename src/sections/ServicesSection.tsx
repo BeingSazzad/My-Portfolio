@@ -40,8 +40,8 @@ export const ServicesSection: React.FC = () => {
                   <span
                     className={`text-2xl md:text-[28px] font-medium tracking-tight transition-all duration-300 ${
                       isOpen
-                        ? 'text-white pl-2'
-                        : 'text-white/70 group-hover:text-white'
+                        ? 'text-[#e2e2e2] pl-2'
+                        : 'text-white/70 group-hover:text-[#e2e2e2]'
                     }`}
                   >
                     {service.title}
@@ -52,7 +52,7 @@ export const ServicesSection: React.FC = () => {
                   className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 flex-shrink-0 ml-4 ${
                     isOpen
                       ? 'border-[#fff95b] text-[#fff95b] rotate-90 bg-white/5'
-                      : 'border-white/20 text-white/50 group-hover:border-white/50 group-hover:text-white'
+                      : 'border-white/20 text-white/50 group-hover:border-white/50 group-hover:text-[#e2e2e2]'
                   }`}
                 >
                   <i className="ri-arrow-right-line text-lg" />
@@ -60,7 +60,7 @@ export const ServicesSection: React.FC = () => {
               </button>
 
               {isOpen && (
-                <div className="pb-8 pt-1 text-white/70 text-base md:text-lg leading-relaxed max-w-2xl animate-fadeIn pl-2">
+                <div className="pb-8 pt-1 text-white/65 text-base md:text-lg leading-relaxed max-w-2xl animate-fadeIn pl-2">
                   <p>{service.description}</p>
 
                   {/* Capability Tags */}
@@ -68,7 +68,7 @@ export const ServicesSection: React.FC = () => {
                     {service.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="px-3 py-1 rounded-full text-xs font-mono bg-white/[0.04] border border-white/10 text-white/60 hover:text-white hover:border-[#fff95b]/40 transition-colors"
+                        className="px-3 py-1 rounded-full text-xs font-mono bg-white/[0.04] border border-white/10 text-white/60 hover:text-[#e2e2e2] hover:border-[#fff95b]/40 transition-colors"
                       >
                         {tag}
                       </span>

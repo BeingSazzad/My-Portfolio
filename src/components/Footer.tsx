@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
     <footer className="py-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-white/50">
       <div>
         <p className="font-normal text-white/60">
-          &copy; {new Date().getFullYear()} <span className="text-white font-medium">Sazzad Chowdhury</span>. All rights reserved.
+          &copy; {new Date().getFullYear()} <span className="text-[#e2e2e2] font-medium">Sazzad Chowdhury</span>. All rights reserved.
         </p>
       </div>
 
