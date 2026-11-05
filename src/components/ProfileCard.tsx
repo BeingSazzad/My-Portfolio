@@ -1,20 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ProgressiveImage } from './ProgressiveImage';
 
 export const ProfileCard: React.FC = () => {
+  const [copied, setCopied] = useState<boolean>(false);
+
   const scrollToContact = (e: React.MouseEvent) => {
     e.preventDefault();
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleCopyEmail = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigator.clipboard.writeText('shazzad.cse@gmail.com');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2200);
+  };
+
   return (
     <div className="w-full">
       <div className="profile-box rounded-[38px] p-6 sm:p-7 md:p-8 flex flex-col items-center text-center bg-[#0d0d0d]/90 backdrop-blur-2xl border border-white/[0.12] shadow-[0_20px_60px_rgba(0,0,0,0.7)] transition-all duration-300 hover:border-white/25">
-        {/* Profile Image */}
+        {/* Profile Image with Progressive Skeleton Loader */}
         <div className="relative w-full aspect-square max-w-[280px] rounded-[28px] overflow-hidden mb-6 border border-white/10 group">
-          <img
+          <ProgressiveImage
             src="/assets/images/profile.jpg"
             alt="Sazzad Chowdhury"
+            containerClassName="w-full h-full"
             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            loading="eager"
           />
         </div>
 
@@ -73,7 +85,7 @@ export const ProfileCard: React.FC = () => {
         </div>
 
         {/* Divider & Contact Button */}
-        <div className="w-full mt-7 pt-6 border-t border-white/10 flex flex-col items-center gap-4">
+        <div className="w-full mt-7 pt-6 border-t border-white/10 flex flex-col items-center gap-4 relative">
           <a
             href="#contact"
             onClick={scrollToContact}
@@ -87,13 +99,24 @@ export const ProfileCard: React.FC = () => {
             <span>LET'S TALK</span>
           </a>
 
-          {/* Email — Clean, no underline */}
-          <a
-            href="mailto:shazzad.cse@gmail.com"
-            className="text-xs font-mono text-white/60 hover:text-[#fff95b] transition-colors"
+          {/* Email with Click-to-Copy UX Standard */}
+          <button
+            type="button"
+            onClick={handleCopyEmail}
+            title="Click to copy email address"
+            className="group relative flex items-center gap-1.5 text-xs font-mono text-white/60 hover:text-[#fff95b] transition-colors focus:outline-none cursor-pointer"
           >
-            shazzad.cse@gmail.com
-          </a>
+            <span>shazzad.cse@gmail.com</span>
+            <i className="ri-file-copy-line text-[11px] opacity-0 group-hover:opacity-100 transition-opacity" />
+          </button>
+
+          {/* Toast Notification */}
+          {copied && (
+            <div className="absolute -bottom-8 px-3 py-1 rounded-full bg-neutral-900 border border-[#fff95b]/40 text-[#fff95b] text-[11px] font-mono tracking-wide shadow-xl flex items-center gap-1.5 animate-fadeIn">
+              <i className="ri-check-line text-xs" />
+              <span>Copied to clipboard!</span>
+            </div>
+          )}
         </div>
       </div>
     </div>

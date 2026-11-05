@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { ProjectModalData } from '../types';
+import { ProgressiveImage } from './ProgressiveImage';
 
 interface LightboxModalProps {
   project: ProjectModalData | null;
@@ -44,12 +45,14 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ project, onClose }
           <i className="ri-close-line text-xl" />
         </button>
 
-        {/* Image Preview */}
+        {/* Image Preview with Progressive Skeleton Loader */}
         <div className="relative w-full max-h-[60vh] overflow-hidden bg-black flex items-center justify-center">
-          <img
+          <ProgressiveImage
             src={project.image}
             alt={project.title}
+            containerClassName="w-full flex items-center justify-center"
             className="w-full h-auto object-contain max-h-[60vh]"
+            loading="eager"
           />
         </div>
 

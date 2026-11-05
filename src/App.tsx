@@ -7,6 +7,7 @@ import { IconBar } from './components/IconBar';
 import { ProfileCard } from './components/ProfileCard';
 import { LightboxModal } from './components/LightboxModal';
 import { Footer } from './components/Footer';
+import { ScrollProgressBar } from './components/ScrollProgressBar';
 
 // Page Flow Sections
 import { HeroSection } from './sections/HeroSection';
@@ -61,6 +62,9 @@ export const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-[#ffffffbf] overflow-x-clip selection:bg-[#fff95b] selection:text-black">
+      {/* 0. Top Reading / Scroll Progress Bar */}
+      <ScrollProgressBar />
+
       {/* 1. Preloader Animation */}
       <Preloader onComplete={() => setLoading(false)} />
 

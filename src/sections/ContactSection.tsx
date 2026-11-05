@@ -120,12 +120,19 @@ export const ContactSection: React.FC = () => {
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="visiblo-btn-color px-10 py-4 text-xs uppercase tracking-wider font-semibold cursor-pointer disabled:opacity-50"
+              className="visiblo-btn-color px-10 py-4 text-xs uppercase tracking-wider font-semibold cursor-pointer disabled:opacity-50 flex items-center gap-2"
             >
-              <span>
-                {status === 'submitting' ? 'SENDING...' : 'SEND MESSAGE'}
-              </span>
-              <i className="ri-send-plane-fill ml-2 text-xs" />
+              {status === 'submitting' ? (
+                <>
+                  <i className="ri-loader-4-line animate-spin text-sm" />
+                  <span>SENDING...</span>
+                </>
+              ) : (
+                <>
+                  <span>SEND MESSAGE</span>
+                  <i className="ri-send-plane-fill text-xs" />
+                </>
+              )}
             </button>
 
             {status === 'success' && (

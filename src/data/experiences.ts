@@ -7,8 +7,9 @@ export const experiences: ExperienceItem[] = [
     period: 'Nov 2024 — Present',
   },
   {
-    role: 'UI/UX Designer (Freelance · Remote)',
+    role: 'UI/UX Designer',
     company: 'Bizzflare',
+    type: 'Freelance · Remote',
     period: 'Nov 2023 — Oct 2024',
   },
   {

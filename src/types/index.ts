@@ -27,6 +27,7 @@ export interface ExperienceItem {
   role: string;
   company: string;
   period: string;
+  type?: string;
 }
 
 export interface TestimonialItem {

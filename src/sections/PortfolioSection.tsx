@@ -1,6 +1,7 @@
 import React from 'react';
 import { projects } from '../data/projects';
 import { ProjectModalData } from '../types';
+import { ProgressiveImage } from '../components/ProgressiveImage';
 
 interface PortfolioSectionProps {
   onSelectProject: (p: ProjectModalData) => void;
@@ -32,11 +33,12 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
           >
             {/* Card Frame with Lightbox Zoom feel */}
             <div className="relative overflow-hidden rounded-[24px] border border-white/15 bg-white/[0.03] p-3 sm:p-4 transition-all duration-500 hover:border-white/40 hover:shadow-[0_10px_40px_rgba(255,249,91,0.06)]">
-              {/* Image Container */}
+              {/* Image Container with Progressive Skeleton Loading */}
               <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[18px] bg-black">
-                <img
+                <ProgressiveImage
                   src={project.image}
                   alt={project.title}
+                  containerClassName="w-full h-full"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
 
