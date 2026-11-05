@@ -15,8 +15,7 @@ export const ResumeSection: React.FC = () => {
 
         {/* Heading */}
         <h2 className="section-title">
-          <span className="text-metallic">Companies &amp; </span><br className="hidden sm:inline" />
-          <span className="color-gradient font-semibold">Experience</span>
+          <span className="text-metallic">Companies &amp; </span><span className="color-gradient font-semibold">Experience</span>
         </h2>
 
         {/* Work Experience List */}
@@ -60,8 +59,7 @@ export const ResumeSection: React.FC = () => {
 
         {/* Heading */}
         <h3 className="section-title">
-          <span className="text-metallic">Academic </span><br className="hidden sm:inline" />
-          <span className="color-gradient font-semibold">Background</span>
+          <span className="text-metallic">Academic </span><span className="color-gradient font-semibold">Background</span>
         </h3>
 
         {/* Education List */}
