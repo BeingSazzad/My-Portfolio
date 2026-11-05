@@ -5,7 +5,7 @@ export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    service: 'UI/UX Product Design & System',
+    service: '',
     message: '',
   });
 
@@ -30,7 +30,7 @@ export const ContactSection: React.FC = () => {
       setFormData({
         name: '',
         email: '',
-        service: 'UI/UX Product Design & System',
+        service: '',
         message: '',
       });
     }, 1000);
@@ -88,26 +88,18 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Service / Project Type */}
+            {/* Subject / Project Scope Text Input — No Dropdown */}
             <div>
               <label className="block text-xs font-mono uppercase tracking-wider text-white/60 mb-2">
-                Project Scope or Service
+                Project Scope / Subject
               </label>
-              <div className="relative">
-                <select
-                  id="service-select"
-                  value={formData.service}
-                  onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className="w-full bg-[#111111] border border-white/20 focus:border-[#fff95b] text-white px-5 py-4 rounded-[12px] outline-none transition-colors duration-200 text-sm appearance-none cursor-pointer"
-                >
-                  <option value="UI/UX Product Design & System">UI/UX Product Design &amp; Figma System</option>
-                  <option value="AI-Driven UX & Vibe Coding">AI-Driven UX &amp; Vibe Coding Prototype</option>
-                  <option value="Mobile App UI/UX (iOS & Android)">Mobile App UI/UX (iOS &amp; Android)</option>
-                  <option value="Web Platform & WordPress Architecture">Web Platform &amp; WordPress Architecture</option>
-                  <option value="Design Team Leadership & Consultation">Design Team Leadership &amp; Consultation</option>
-                </select>
-                <i className="ri-arrow-down-s-line absolute right-5 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none text-lg" />
-              </div>
+              <input
+                type="text"
+                placeholder="e.g. Mobile App UI/UX, Web Design, Vibe Coding, etc."
+                value={formData.service}
+                onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                className="w-full bg-white/[0.03] border border-white/20 focus:border-[#fff95b] text-white px-5 py-4 rounded-[12px] outline-none transition-colors duration-200 text-sm placeholder:text-white/30"
+              />
             </div>
 
             {/* Message */}
