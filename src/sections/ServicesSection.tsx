@@ -20,7 +20,7 @@ export const ServicesSection: React.FC = () => {
 
       {/* Heading */}
       <h2 className="section-title">
-        Solutions That <br className="hidden sm:inline" />
+        <span className="text-metallic">Solutions That </span><br className="hidden sm:inline" />
         <span className="color-gradient font-semibold">Empower Your Product</span>
       </h2>
 

@@ -48,7 +48,7 @@ export const ContactSection: React.FC = () => {
 
       {/* Heading */}
       <h3 className="section-title">
-        Let's Build Something <br className="hidden sm:inline" />
+        <span className="text-metallic">Let's Build Something </span><br className="hidden sm:inline" />
         <span className="color-gradient font-semibold">Exceptional Together</span>
       </h3>
 
@@ -88,14 +88,14 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Subject / Project Scope Text Input — Clean text input */}
+            {/* Subject Input */}
             <div>
               <label className="block text-xs font-mono uppercase tracking-wider text-white/60 mb-2">
-                Project Scope / Subject
+                Subject
               </label>
               <input
                 type="text"
-                placeholder="e.g. Mobile App UI/UX, Design System, Code Prototype..."
+                placeholder="e.g. Product Design Inquiry"
                 value={formData.service}
                 onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                 className="w-full bg-white/[0.03] border border-white/20 focus:border-[#fff95b] text-white px-5 py-4 rounded-[12px] outline-none transition-colors duration-200 text-sm placeholder:text-white/30"
@@ -162,10 +162,10 @@ export const ContactSection: React.FC = () => {
                   <i className="ri-mail-line" />
                 </div>
                 <a
-                  href="mailto:sazzadux@gmail.com"
+                  href="mailto:shazzad.cse@gmail.com"
                   className="hover:text-white transition-colors truncate"
                 >
-                  sazzadux@gmail.com
+                  shazzad.cse@gmail.com
                 </a>
               </div>
 

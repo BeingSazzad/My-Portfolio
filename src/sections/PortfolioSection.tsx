@@ -19,7 +19,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
 
       {/* Heading */}
       <h2 className="section-title">
-        Projects Where Creativity <br className="hidden sm:inline" />
+        <span className="text-metallic">Projects Where Creativity </span><br className="hidden sm:inline" />
         <span className="color-gradient font-semibold">Meets Business Strategy</span>
       </h2>
 

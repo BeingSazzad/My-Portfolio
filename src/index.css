@@ -22,32 +22,63 @@ body {
   overflow-x: clip;
 }
 
-/* Visiblo Signature Typography Gradient */
+/* Visiblo Signature Accent Color Gradient */
 .color-gradient, span.color {
-  background-image: linear-gradient(278deg, var(--visiblo-primary-color) 0%, var(--visiblo-secondary-color) 100%);
+  background-image: linear-gradient(278deg, var(--visiblo-primary-color) 0%, var(--visiblo-secondary-color) 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  display: inline;
+}
+
+/* Visiblo Signature Metallic Silver Heading Gradient (Not flat white) */
+.text-metallic {
+  background-image: linear-gradient(0deg, rgb(119, 119, 119) -10%, rgb(255, 255, 255) 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  display: inline;
+}
+
+/* Visiblo Section Title */
+.section-title {
+  font-size: clamp(28px, 5.5vw, 48px);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  background-image: linear-gradient(0deg, rgb(119, 119, 119) -10%, rgb(255, 255, 255) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 52px;
+    line-height: 1.14;
+  }
+}
+
 /* Visiblo Primary Glowing Button */
 .visiblo-btn-color {
   background: linear-gradient(90deg, var(--visiblo-primary-color) 0%, var(--visiblo-secondary-color) 100%) !important;
-  box-shadow: var(--visiblo-secondary-color) 0px 0px 15px 0px, rgba(255, 255, 255, 0.76) 0px 0px 4px 0px inset !important;
+  box-shadow: var(--visiblo-secondary-color) 0px 0px 18px 0px, rgba(255, 255, 255, 0.76) 0px 0px 4px 0px inset !important;
   border: 1px solid var(--visiblo-secondary-color) !important;
   color: #000000 !important;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .visiblo-btn-color:hover {
   transform: translateY(-2px);
-  box-shadow: var(--visiblo-secondary-color) 0px 0px 22px 3px, rgba(255, 255, 255, 0.9) 0px 0px 6px 0px inset !important;
+  box-shadow: var(--visiblo-secondary-color) 0px 0px 24px 4px, rgba(255, 255, 255, 0.9) 0px 0px 6px 0px inset !important;
 }
 
 .visiblo-btn-color:active {
@@ -80,25 +111,16 @@ body {
 .eyebrow-badge {
   display: inline-flex;
   align-items: center;
-  padding: 5px 20px;
+  padding: 6px 20px;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
   font-size: 12px;
-  line-height: 22px;
+  line-height: 20px;
   font-weight: 500;
   color: #9c9c9c;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
-}
-
-/* Glass Effect */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.3), inset -1px -3px 2px rgba(0, 0, 0, 0.3), inset 1px 1px 0px rgba(232, 232, 232, 0.15);
 }
 
 /* Skill Card */
@@ -114,38 +136,6 @@ body {
   border-color: rgba(255, 249, 91, 0.5);
   transform: translateY(-4px);
   box-shadow: rgba(255, 147, 15, 0.15) 0px 10px 30px 0px, rgba(255, 255, 255, 0.12) 0px 9.94px 47.5px -2.84px inset;
-}
-
-/* Pricing Card */
-.pricing-card {
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 36px 32px;
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(25px);
-  transition: all 0.5s ease;
-}
-
-.pricing-card:hover {
-  border-color: var(--visiblo-primary-color);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 30px rgba(255, 249, 91, 0.08);
-}
-
-/* Section Title */
-.section-title {
-  font-size: clamp(28px, 6vw, 38px);
-  line-height: 1.2;
-  font-weight: 500;
-  color: #ffffff;
-  letter-spacing: -0.02em;
-}
-
-@media (min-width: 768px) {
-  .section-title {
-    font-size: 46px;
-    line-height: 1.18;
-  }
 }
 
 /* Video Background */
@@ -172,11 +162,27 @@ body {
 .ticker-track {
   display: flex;
   width: max-content;
-  animation: continuousScroll 30s linear infinite;
+  animation: continuousScroll 32s linear infinite;
 }
 
 .ticker-track:hover {
   animation-play-state: paused;
+}
+
+/* Fade Up Smooth Animations */
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up-anime {
+  animation: fadeUpAnime 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Custom Scrollbar */
@@ -193,4 +199,3 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--visiblo-secondary-color);
 }
-

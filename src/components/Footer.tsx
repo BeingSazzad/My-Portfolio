@@ -8,11 +8,8 @@ export const Footer: React.FC = () => {
   return (
     <footer className="py-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm text-white/50">
       <div>
-        <p className="font-normal">
+        <p className="font-normal text-white/60">
           &copy; {new Date().getFullYear()} <span className="text-white font-medium">Sazzad Chowdhury</span>. All rights reserved.
-        </p>
-        <p className="text-xs text-white/40 mt-1">
-          Senior UI/UX Designer · Inter typography, design tokens &amp; vibe coding.
         </p>
       </div>
 

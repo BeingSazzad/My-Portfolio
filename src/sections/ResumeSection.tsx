@@ -14,7 +14,7 @@ export const ResumeSection: React.FC = () => {
 
       {/* Heading */}
       <h2 className="section-title">
-        Companies &amp; <br className="hidden sm:inline" />
+        <span className="text-metallic">Companies &amp; </span><br className="hidden sm:inline" />
         <span className="color-gradient font-semibold">Work Experience</span>
       </h2>
 

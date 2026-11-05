@@ -14,7 +14,7 @@ export const SkillsSection: React.FC = () => {
 
       {/* Heading */}
       <h2 className="section-title">
-        Tools &amp; <span className="color-gradient font-semibold">Technologies</span>
+        <span className="text-metallic">Tools &amp; </span><span className="color-gradient font-semibold">Technologies</span>
       </h2>
 
       {/* Tools Grid — 4 Columns on desktop, 8 tools, ONLY Tool Name */}
