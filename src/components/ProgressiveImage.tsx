@@ -49,3 +49,4 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
     </div>
   );
 };
+
