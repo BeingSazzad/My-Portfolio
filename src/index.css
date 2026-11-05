@@ -1,0 +1,196 @@
+@import 'remixicon/fonts/remixicon.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --visiblo-primary-color: #fff95b;
+  --visiblo-secondary-color: #ff930f;
+  --visiblo-surface: #000000;
+  --visiblo-border-muted: rgba(255, 255, 255, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffffbf;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Visiblo Signature Typography Gradient */
+.color-gradient, span.color {
+  background-image: linear-gradient(278deg, var(--visiblo-primary-color) 0%, var(--visiblo-secondary-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Visiblo Primary Glowing Button */
+.visiblo-btn-color {
+  background: linear-gradient(90deg, var(--visiblo-primary-color) 0%, var(--visiblo-secondary-color) 100%) !important;
+  box-shadow: var(--visiblo-secondary-color) 0px 0px 15px 0px, rgba(255, 255, 255, 0.76) 0px 0px 4px 0px inset !important;
+  border: 1px solid var(--visiblo-secondary-color) !important;
+  color: #000000 !important;
+  font-weight: 500;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visiblo-btn-color:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--visiblo-secondary-color) 0px 0px 22px 3px, rgba(255, 255, 255, 0.9) 0px 0px 6px 0px inset !important;
+}
+
+.visiblo-btn-color:active {
+  transform: translateY(0);
+}
+
+/* Visiblo Outline Arrow Button */
+.visiblo-btn-arrow {
+  position: relative;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 50px;
+  padding: 13px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.visiblo-btn-arrow:hover {
+  border-color: var(--visiblo-primary-color);
+  color: var(--visiblo-primary-color);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Eyebrow Badge */
+.eyebrow-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 20px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #9c9c9c;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+/* Glass Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.3), inset -1px -3px 2px rgba(0, 0, 0, 0.3), inset 1px 1px 0px rgba(232, 232, 232, 0.15);
+}
+
+/* Skill Card */
+.skill-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.08) 0px 9.94px 47.5px -2.84px inset, rgba(255, 255, 255, 0.2) 0.19px 0.19px 0.5px 0px inset;
+  transition: all 0.4s ease;
+}
+
+.skill-card:hover {
+  border-color: rgba(255, 249, 91, 0.5);
+  transform: translateY(-4px);
+  box-shadow: rgba(255, 147, 15, 0.15) 0px 10px 30px 0px, rgba(255, 255, 255, 0.12) 0px 9.94px 47.5px -2.84px inset;
+}
+
+/* Pricing Card */
+.pricing-card {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 36px 32px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(25px);
+  transition: all 0.5s ease;
+}
+
+.pricing-card:hover {
+  border-color: var(--visiblo-primary-color);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 30px rgba(255, 249, 91, 0.08);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 46px;
+    line-height: 1.18;
+  }
+}
+
+/* Video Background */
+.hero-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+  filter: contrast(1.1) brightness(0.8);
+}
+
+/* Marquee / Slider */
+@keyframes continuousScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: continuousScroll 30s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--visiblo-secondary-color);
+}
+
