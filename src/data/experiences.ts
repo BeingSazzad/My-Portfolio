@@ -7,7 +7,7 @@ export const experiences: ExperienceItem[] = [
     period: 'Nov 2024 — Present',
   },
   {
-    role: 'UI/UX Designer (Remote)',
+    role: 'UI/UX Designer (Freelance · Remote)',
     company: 'Bizzflare',
     period: 'Nov 2023 — Oct 2024',
   },
@@ -17,7 +17,7 @@ export const experiences: ExperienceItem[] = [
     period: 'Sep 2021 — Jul 2024',
   },
   {
-    role: 'Digital Marketer & Web Designer',
+    role: 'Digital Marketer',
     company: 'Silicon Solution',
     period: 'Jan 2021 — Aug 2021',
   },
