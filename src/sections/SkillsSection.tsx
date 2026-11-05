@@ -7,7 +7,7 @@ export const SkillsSection: React.FC = () => {
       {/* Eyebrow Badge */}
       <div className="mb-6">
         <div className="eyebrow-badge">
-          <span>TOOLS &amp; STACK</span>
+          <span>MY STACK</span>
         </div>
       </div>
 
