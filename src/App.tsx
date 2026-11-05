@@ -80,17 +80,17 @@ export const App: React.FC = () => {
         activeSection={activeSection}
       />
 
-      {/* 5. Main Responsive Grid Container */}
-      <div className="relative z-10 max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-10 xl:px-12 py-10 lg:py-16">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 xl:gap-14 items-stretch">
+      {/* 5. Main Responsive Grid Container — Visiblo Proportioned Layout */}
+      <div className="relative z-10 max-w-[1240px] mx-auto px-5 sm:px-8 lg:px-10 py-10 lg:py-16">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 items-stretch">
           {/* Left Column: Fixed / Sticky Profile Card — stays locked in place as you scroll */}
-          <aside className="w-full lg:w-[320px] xl:w-[360px] flex-shrink-0 self-stretch relative">
+          <aside className="w-full lg:w-[320px] xl:w-[350px] flex-shrink-0 self-stretch relative">
             <div className="lg:sticky lg:top-8 xl:top-12 z-20">
               <ProfileCard />
             </div>
           </aside>
 
-          {/* Right Column: Main Content Sections — Full Responsive Breadth */}
+          {/* Right Column: Main Content Sections — Balanced & Breathable */}
           <main className="w-full flex-1 min-w-0">
             <HeroSection />
             <AboutSection />
