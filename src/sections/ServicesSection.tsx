@@ -13,7 +13,6 @@ export const ServicesSection: React.FC = () => {
       {/* Eyebrow Badge */}
       <div className="mb-6">
         <div className="eyebrow-badge">
-          <i className="ri-customer-service-2-line text-[#fff95b] mr-2 text-xs" />
           <span>CAPABILITIES &amp; SERVICES</span>
         </div>
       </div>

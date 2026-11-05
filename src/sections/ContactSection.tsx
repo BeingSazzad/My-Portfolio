@@ -41,7 +41,6 @@ export const ContactSection: React.FC = () => {
       {/* Eyebrow Badge */}
       <div className="mb-6">
         <div className="eyebrow-badge">
-          <i className="ri-mail-send-line text-[#fff95b] mr-2 text-xs" />
           <span>CONTACT</span>
         </div>
       </div>

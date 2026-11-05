@@ -17,7 +17,6 @@ export const HeroSection: React.FC = () => {
       {/* Eyebrow Badge — Pure Visiblo Minimalism */}
       <div className="mb-6">
         <div className="eyebrow-badge">
-          <i className="ri-sparkling-fill text-[#fff95b] mr-2 text-xs" />
           <span>HELLO</span>
         </div>
       </div>

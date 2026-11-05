@@ -6,7 +6,6 @@ export const AboutSection: React.FC = () => {
       {/* Eyebrow Badge */}
       <div className="mb-6">
         <div className="eyebrow-badge">
-          <i className="ri-user-smile-line text-[#fff95b] mr-2 text-xs" />
           <span>ABOUT</span>
         </div>
       </div>

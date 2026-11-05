@@ -12,7 +12,6 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onSelectProj
       {/* Eyebrow Badge */}
       <div className="mb-6">
         <div className="eyebrow-badge">
-          <i className="ri-folder-open-line text-[#fff95b] mr-2 text-xs" />
           <span>SELECTED CASE STUDIES</span>
         </div>
       </div>
