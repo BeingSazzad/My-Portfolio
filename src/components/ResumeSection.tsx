@@ -18,7 +18,7 @@ const experiences: ExperienceItem[] = [
     period: 'Nov 2023 — Oct 2024',
   },
   {
-    role: 'Product & UI Designer',
+    role: 'Digital Marketer & Web Developer',
     company: 'One Sky Communications',
     period: 'Sep 2021 — Jul 2024',
   },
