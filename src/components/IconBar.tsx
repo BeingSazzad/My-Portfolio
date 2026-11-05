@@ -10,7 +10,7 @@ const navItems: NavItem[] = [
   { id: 'home', label: 'Home', icon: 'ri-home-3-line' },
   { id: 'about', label: 'About', icon: 'ri-user-line' },
   { id: 'resume', label: 'Experience', icon: 'ri-briefcase-line' },
-  { id: 'service', label: 'Services', icon: 'ri-customer-service-2-line' },
+  { id: 'service', label: 'Services', icon: 'ri-shapes-line' },
   { id: 'skills', label: 'Skills', icon: 'ri-tools-line' },
   { id: 'portfolio', label: 'Portfolio', icon: 'ri-computer-line' },
   { id: 'contact', label: 'Contact', icon: 'ri-mail-send-line' },
