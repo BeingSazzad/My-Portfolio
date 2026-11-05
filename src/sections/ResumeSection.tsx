@@ -4,26 +4,23 @@ import { experiences, educations } from '../data/experiences';
 export const ResumeSection: React.FC = () => {
   return (
     <section id="resume" className="py-16 md:py-24 border-b border-white/10">
-      {/* Eyebrow Badge */}
-      <div className="mb-6">
-        <div className="eyebrow-badge">
-          <span>EXPERIENCE &amp; EDUCATION</span>
-        </div>
-      </div>
-
-      {/* Heading */}
-      <h2 className="section-title">
-        <span className="text-metallic">Work Experience &amp; </span><br className="hidden sm:inline" />
-        <span className="color-gradient font-semibold">Education</span>
-      </h2>
-
-      {/* 01. Work Experience Subsection */}
-      <div className="mt-12">
-        <div className="text-xs font-mono tracking-widest text-[#fff95b] uppercase mb-4">
-          // WORK EXPERIENCE
+      {/* 01. Work Experience Block */}
+      <div>
+        {/* Eyebrow Badge */}
+        <div className="mb-6">
+          <div className="eyebrow-badge">
+            <span>WORK EXPERIENCE</span>
+          </div>
         </div>
 
-        <div className="divide-y divide-white/15 border-t border-b border-white/15">
+        {/* Heading */}
+        <h2 className="section-title">
+          <span className="text-metallic">Companies &amp; </span><br className="hidden sm:inline" />
+          <span className="color-gradient font-semibold">Experience</span>
+        </h2>
+
+        {/* Work Experience List */}
+        <div className="mt-12 divide-y divide-white/15 border-t border-b border-white/15">
           {experiences.map((exp, index) => (
             <div
               key={index}
@@ -52,13 +49,23 @@ export const ResumeSection: React.FC = () => {
         </div>
       </div>
 
-      {/* 02. Education Subsection */}
-      <div className="mt-14">
-        <div className="text-xs font-mono tracking-widest text-[#fff95b] uppercase mb-4">
-          // ACADEMIC BACKGROUND
+      {/* 02. Education Block — Styled strictly to the Web Design System */}
+      <div id="education" className="mt-16 md:mt-24">
+        {/* Eyebrow Badge */}
+        <div className="mb-6">
+          <div className="eyebrow-badge">
+            <span>EDUCATION</span>
+          </div>
         </div>
 
-        <div className="divide-y divide-white/15 border-t border-b border-white/15">
+        {/* Heading */}
+        <h3 className="section-title">
+          <span className="text-metallic">Academic </span><br className="hidden sm:inline" />
+          <span className="color-gradient font-semibold">Background</span>
+        </h3>
+
+        {/* Education List */}
+        <div className="mt-12 divide-y divide-white/15 border-t border-b border-white/15">
           {educations.map((edu, index) => (
             <div
               key={index}
