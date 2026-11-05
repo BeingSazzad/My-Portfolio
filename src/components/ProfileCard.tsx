@@ -42,15 +42,25 @@ export const ProfileCard: React.FC = () => {
           </p>
         </div>
 
-        {/* Social & Portfolio Links — Featuring GitHub, LinkedIn, Dribbble, Web, Phone */}
-        <div className="flex items-center justify-center gap-2 mt-6 flex-wrap">
+        {/* Social Links — Order: Dribbble -> GitHub -> LinkedIn -> Phone */}
+        <div className="flex items-center justify-center gap-3 mt-6">
+          <a
+            href="https://dribbble.com/Sazzad_Ux"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Dribbble Portfolio"
+            title="Dribbble"
+            className="w-10 h-10 rounded-full border border-white/15 bg-white/[0.02] flex items-center justify-center text-white/70 hover:text-[#fff95b] hover:border-[#fff95b] hover:bg-white/5 transition-all duration-200"
+          >
+            <i className="ri-dribbble-line text-base" />
+          </a>
           <a
             href="https://github.com/BeingSazzad"
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub Profile"
             title="GitHub"
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/15 bg-white/[0.02] flex items-center justify-center text-white/70 hover:text-[#fff95b] hover:border-[#fff95b] hover:bg-white/5 transition-all duration-200"
+            className="w-10 h-10 rounded-full border border-white/15 bg-white/[0.02] flex items-center justify-center text-white/70 hover:text-[#fff95b] hover:border-[#fff95b] hover:bg-white/5 transition-all duration-200"
           >
             <i className="ri-github-fill text-base" />
           </a>
@@ -60,35 +70,15 @@ export const ProfileCard: React.FC = () => {
             rel="noreferrer"
             aria-label="LinkedIn Profile"
             title="LinkedIn"
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/15 bg-white/[0.02] flex items-center justify-center text-white/70 hover:text-[#fff95b] hover:border-[#fff95b] hover:bg-white/5 transition-all duration-200"
+            className="w-10 h-10 rounded-full border border-white/15 bg-white/[0.02] flex items-center justify-center text-white/70 hover:text-[#fff95b] hover:border-[#fff95b] hover:bg-white/5 transition-all duration-200"
           >
             <i className="ri-linkedin-fill text-base" />
-          </a>
-          <a
-            href="https://dribbble.com/Sazzad_Ux"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Dribbble Portfolio"
-            title="Dribbble"
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/15 bg-white/[0.02] flex items-center justify-center text-white/70 hover:text-[#fff95b] hover:border-[#fff95b] hover:bg-white/5 transition-all duration-200"
-          >
-            <i className="ri-dribbble-line text-base" />
-          </a>
-          <a
-            href="https://shazzadux.com"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Personal Website"
-            title="Website"
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/15 bg-white/[0.02] flex items-center justify-center text-white/70 hover:text-[#fff95b] hover:border-[#fff95b] hover:bg-white/5 transition-all duration-200"
-          >
-            <i className="ri-global-line text-base" />
           </a>
           <a
             href="tel:+8801830685904"
             aria-label="Phone / WhatsApp Contact"
             title="Phone / WhatsApp"
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/15 bg-white/[0.02] flex items-center justify-center text-white/70 hover:text-[#fff95b] hover:border-[#fff95b] hover:bg-white/5 transition-all duration-200"
+            className="w-10 h-10 rounded-full border border-white/15 bg-white/[0.02] flex items-center justify-center text-white/70 hover:text-[#fff95b] hover:border-[#fff95b] hover:bg-white/5 transition-all duration-200"
           >
             <i className="ri-phone-line text-sm" />
           </a>

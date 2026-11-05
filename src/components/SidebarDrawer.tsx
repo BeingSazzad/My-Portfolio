@@ -109,7 +109,16 @@ export const SidebarDrawer: React.FC<SidebarDrawerProps> = ({
           >
             shazzad.cse@gmail.com
           </a>
-          <div className="mt-4 flex gap-2.5 text-white/60">
+          <div className="mt-4 flex gap-3 text-white/60">
+            <a
+              href="https://dribbble.com/Sazzad_Ux"
+              target="_blank"
+              rel="noreferrer"
+              title="Dribbble"
+              className="hover:text-[#fff95b] transition-colors p-2 rounded-full bg-white/5"
+            >
+              <i className="ri-dribbble-line text-sm" />
+            </a>
             <a
               href="https://github.com/BeingSazzad"
               target="_blank"
@@ -127,24 +136,6 @@ export const SidebarDrawer: React.FC<SidebarDrawerProps> = ({
               className="hover:text-[#fff95b] transition-colors p-2 rounded-full bg-white/5"
             >
               <i className="ri-linkedin-fill text-sm" />
-            </a>
-            <a
-              href="https://dribbble.com/Sazzad_Ux"
-              target="_blank"
-              rel="noreferrer"
-              title="Dribbble"
-              className="hover:text-[#fff95b] transition-colors p-2 rounded-full bg-white/5"
-            >
-              <i className="ri-dribbble-line text-sm" />
-            </a>
-            <a
-              href="https://shazzadux.com"
-              target="_blank"
-              rel="noreferrer"
-              title="Website"
-              className="hover:text-[#fff95b] transition-colors p-2 rounded-full bg-white/5"
-            >
-              <i className="ri-global-line text-sm" />
             </a>
             <a
               href="tel:+8801830685904"
