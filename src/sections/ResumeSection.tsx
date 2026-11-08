@@ -3,7 +3,7 @@ import { experiences, educations } from '../data/experiences';
 
 export const ResumeSection: React.FC = () => {
   return (
-    <section id="resume" className="py-16 md:py-24 border-b border-white/10">
+    <section id="resume" className="py-16 md:py-20">
       {/* 01. Work Experience Block */}
       <div>
         {/* Eyebrow Badge */}
