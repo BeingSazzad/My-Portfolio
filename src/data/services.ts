@@ -3,30 +3,30 @@ import { ServiceItem } from '../types';
 export const services: ServiceItem[] = [
   {
     id: 1,
-    title: 'Product & Interface Design',
+    title: 'UI/UX Design',
     description:
-      'Designing clean, purposeful user experiences for web and mobile products. From user research and information architecture to interactive wireframes, component design systems, and developer-ready Figma specifications.',
-    tags: ['Figma', 'Mobile & Web Apps', 'Design Systems', 'User Flows', 'Wireframing', 'WCAG Accessibility'],
+      'End-to-end product design for web and mobile applications. From user research and wireframing to high-fidelity Figma prototypes and developer-ready specifications.',
+    tags: ['Mobile Apps', 'Web Apps', 'User Research', 'Wireframing', 'Prototyping', 'Figma'],
   },
   {
     id: 2,
-    title: 'Interactive Code Prototyping',
+    title: 'Design Systems',
     description:
-      'Building working prototypes in React and Tailwind to stress-test real interaction physics, animations, and responsive states before committing to engineering builds. Catching usability friction early saves weeks of rework.',
-    tags: ['React', 'Tailwind CSS', 'Interactive Prototypes', 'Design Handoff', 'Component Systems'],
+      'Scalable, token-driven component libraries that maintain brand consistency, accelerate product release cycles, and bridge the gap between design and code.',
+    tags: ['Component Libraries', 'Design Tokens', 'Style Guides', 'Figma Variants', 'Developer Handoff'],
   },
   {
     id: 3,
-    title: 'Custom Web & WordPress Development',
+    title: 'Web Development',
     description:
-      'Transforming approved UI designs into clean, fast-loading, and responsive websites. Lightweight code structure, search engine friendly markup, and straightforward CMS architectures that clients can easily manage.',
-    tags: ['WordPress', 'Custom Themes', 'Responsive Web', 'Landing Pages', 'Performance Optimization'],
+      'Bringing interfaces to life with clean, responsive, and fast-loading code. Building custom landing pages, interactive prototypes, and flexible WordPress websites.',
+    tags: ['Frontend', 'WordPress', 'Landing Pages', 'Responsive Design', 'Speed Optimization'],
   },
   {
     id: 4,
-    title: 'Conversion UX & Growth Strategy',
+    title: 'UX Audit & Strategy',
     description:
-      'Applying 5+ years of practical marketing and SEO experience to interface design. Designing high-converting landing pages, clear onboarding flows, and user journeys that help visitors discover real value quickly.',
-    tags: ['Landing Pages', 'Onboarding Flows', 'Conversion Optimization', 'SEO Architecture', 'UX Audits'],
+      'In-depth evaluation of existing products to uncover usability bottlenecks, streamline user onboarding, and optimize conversion funnels for measurable impact.',
+    tags: ['Heuristic Evaluation', 'User Onboarding', 'Conversion Optimization', 'UX Audits', 'A/B Testing'],
   },
 ];
