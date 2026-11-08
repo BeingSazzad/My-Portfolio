@@ -10,10 +10,10 @@ export const services: ServiceItem[] = [
   },
   {
     id: 2,
-    title: 'Design Systems',
+    title: 'Vibe Coding & Prototyping',
     description:
-      'Scalable, token-driven component libraries that maintain brand consistency, accelerate product release cycles, and bridge the gap between design and code.',
-    tags: ['Component Libraries', 'Design Tokens', 'Style Guides', 'Figma Variants', 'Developer Handoff'],
+      'Translating Figma designs into functional, interactive web applications using AI-assisted vibe coding tools (Cursor, Claude, Lovable, Antigravity). Validating animations, real user states, and interactions at lightning speed before engineering.',
+    tags: ['Vibe Coding', 'Cursor', 'Claude', 'Lovable', 'Antigravity', 'React Prototypes'],
   },
   {
     id: 3,
