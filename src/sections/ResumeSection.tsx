@@ -23,7 +23,7 @@ export const ResumeSection: React.FC = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="py-7 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-3 group hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition-colors duration-200"
+              className="py-7 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-3 group transition-colors duration-200"
             >
               <div className="flex-1">
                 <div className="flex items-center gap-3 flex-wrap">
@@ -67,7 +67,7 @@ export const ResumeSection: React.FC = () => {
           {educations.map((edu, index) => (
             <div
               key={index}
-              className="py-7 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-3 group hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition-colors duration-200"
+              className="py-7 md:py-8 flex flex-col md:flex-row md:items-center justify-between gap-3 group transition-colors duration-200"
             >
               <div className="flex-1">
                 <div className="flex items-center gap-3 flex-wrap">

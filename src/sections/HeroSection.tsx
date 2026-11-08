@@ -14,17 +14,10 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section id="home" className="pt-6 md:pt-10 pb-16 md:pb-24 border-b border-white/10">
-      {/* Eyebrow Badge — Pure Visiblo Minimalism */}
-      <div className="mb-6">
-        <div className="eyebrow-badge">
-          <span>HELLO</span>
-        </div>
-      </div>
-
       {/* Hero Headline — Visiblo Signature Metallic & Gold Gradient */}
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[62px] font-medium leading-[1.14] tracking-tight">
-        <span className="text-metallic">Designing digital products</span><br />
-        <span className="text-metallic">that feel simple &amp; </span><span className="color-gradient font-semibold">ready to ship</span>
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[60px] font-medium leading-[1.15] tracking-tight">
+        <span className="text-metallic">Product Designer crafting </span><br className="hidden sm:inline" />
+        <span className="text-metallic">high-impact web &amp; mobile </span><span className="color-gradient font-semibold">experiences</span>
       </h1>
 
       {/* Unified Narrative — Human-Centric, Honest Craft & Philosophy */}

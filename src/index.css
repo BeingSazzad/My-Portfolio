@@ -208,8 +208,8 @@ body {
   object-fit: cover;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.35;
-  filter: contrast(1.1) brightness(0.8);
+  opacity: 0.18;
+  filter: contrast(1.05) brightness(0.7);
 }
 
 /* Marquee / Slider */
